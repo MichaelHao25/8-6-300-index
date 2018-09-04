@@ -1,0 +1,432 @@
+﻿@import 'reset.css'
+
+/* @import "function.css"; */
+/*
+
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#99ffffff,endColorstr=#99ffffff)";  
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+background:rgba(255,255,255,.8);
+
+
+filter:alpha(opacity=40); 针对 IE8 以及更早的版本 */
+.w
+	box-sizing border-box
+	margin 0 auto
+	padding 0 15px
+	max-width 1200px
+	width 100%
+
+body
+	font-size 100%
+	padding-top 160px
+	min-width 1300px
+input
+	&::placeholder
+		font-style italic
+		font-size 20px
+		font-family 'microsoft Yahei'
+
+.header
+	position absolute
+	top 0
+	left 0
+	right 0
+	z-index 1
+	padding-bottom 10px
+	border-bottom 4px solid #008dcb
+	background #282828
+	box-shadow 0 0 8px rgba(#000, 0.5)
+	transform translateZ(0)
+	min-width 1300px
+	&.active
+		position fixed
+		top -110px
+		.search-box
+			padding-left 50px
+			input
+				width 200px
+		.menu
+			.item
+				padding-left 30px
+		.brand-small
+			display block
+	.brand
+		margin 45px 0 30px
+		width 390px
+		height 46px
+		background url('') left center/auto 46px no-repeat
+
+	.login-box
+		padding-top 45px
+		color #7ecef4
+		font-size 12px
+
+		a
+			padding 0 5px
+			transition 0.3s
+			&:hover
+				color #ffffff
+	.brand-small
+		position absolute
+		left 0
+		bottom 0
+		width 150px
+		height 25px
+		background url('') left center/150px auto no-repeat
+		display none
+		
+	.search-box
+		padding-left 70px
+
+		// @media (max-width: 1550px)
+		// 	padding-bottom 20px
+		// 	padding-left 200px
+
+		input
+			width 240px
+			height 23px
+			outline none
+			border none
+			border-bottom 1px solid #939394
+			background none
+			color #ffffff
+			line-height 23px
+			font-size 14px
+
+			&::placeholder
+				color #ffffff
+				font-style italic
+				font-size 14px
+				font-family 'microsoft Yahei'
+
+		a
+			margin-left -10px
+			width 24px
+			height 24px
+			background url('img/80ce6865876bb2d5b3c770837b18885e-28+32.png') center center / auto 100% no-repeat
+			transition 0.3s
+			&:hover
+				background-image url('../img/b261b552a76e890a9a51fdee8c7987cb-28+32.png')
+
+	.menu
+		.item
+			padding-left 30px
+
+			a
+				display block
+				padding-left 40px
+				background url('') left center /auto 24px no-repeat
+				color #ffffff
+				font-size 14px
+				line-height 24px
+				opacity 0.5
+				transition 0.3s opacity 
+
+				&.active, &:hover
+					opacity 1
+
+.main
+	padding 30px 0
+
+	.left-menu
+		width 208px
+
+		.title
+			height 36px
+			border-bottom 1px solid #9fa0a0
+			color #313131
+			font-size 14px
+			line-height 36px
+
+			.icon
+				width 50px
+				height 100%
+				background url('') center center / auto 80% no-repeat
+
+		.item
+			padding 0 0 5px 50px
+			color #707070
+			font-size 14px
+			line-height 24px
+
+			&:first-child
+				padding-top 5px
+
+			a
+				position relative
+				transition 0.3s
+				&:hover
+					color #008dcb
+					&:after
+						background #008dcb
+				&:after
+					position absolute
+					top 50%
+					left -30px
+					margin-top -5px
+					width 10px
+					height 10px
+					border-radius 50%
+					background #dcdcdc
+					content ''
+					transition 0.3s
+
+	.right-container
+		position relative
+		width 890px
+
+		.h2-block
+			border-bottom 1px solid #9fa0a0
+			color #313131
+			text-align left
+			font-size 20px
+			line-height 36px
+
+		.sort-block
+			color #898989
+			font-size 14px
+			line-height 36px
+
+			.item
+				position relative
+				padding 0 0 0 20px
+				select
+					outline none
+					border none
+				&:hover
+					&>select
+						color #008dcb
+						// background-image url('../img/abfe6090c16cb07740aa95d13b03f40f-20+12.png')
+					.child-menu
+						display block
+			.child-menu
+				position absolute
+				z-index 1
+				background rgba(#505050,1)
+				display none
+				li
+					border-top 1px solid #666
+					min-width 110px
+					float left
+					a
+						background none
+						padding 0 25px 0 15px
+						color #ffffff
+						white-space nowrap
+						&:hover
+							color #008dcb
+							
+			a
+				display block
+				padding-right 20px
+				background url('../img/f15edad5feaaea0fdf20497860fc4e26-20+12.png') right center/auto 10px no-repeat
+				transition 0.3s
+				// border-bottom 1px dotted transparent
+				&:hover
+					// border-bottom-color #cccccc
+					color #008dcb
+					background-image url('../img/abfe6090c16cb07740aa95d13b03f40f-20+12.png')
+					
+
+		.search-block
+			// position absolute
+			// top 51px
+			// right 0
+			padding-top 9px
+			// transition 0.3s
+
+			// @media (max-width: 1530px)
+			// 	top 0
+			// 	right 0
+			// 	padding-top 0
+
+			input
+				padding 0 10px
+				width 230px
+				height 20px
+				outline none
+				border 1px solid #d7d8d8
+				border-radius 3px
+				color #898989
+				font-size 14px
+				line-height 20px
+				&::placeholder
+					font-size 14px
+
+			a
+				padding 0 10px
+				color #898989
+				font-size 14px
+				line-height 20px
+				transition 0.3s
+				&:hover
+					color #008dcb
+
+		.p30-0-90
+			padding 25px 0 70px
+
+		.banner-block
+			position relative
+			width 525px
+			transition 0.3s
+			overflow hidden
+			a
+				display block
+			&:hover
+				img
+					transform scale(1.1)
+
+			img
+				display block
+				width 100%
+				transition 1s
+
+			.layout
+				position absolute
+				right 0
+				bottom 0
+				left 0
+				padding 10px
+				background rgba(#000, 0.5)
+				color #ffffff
+				font-size 22px
+				line-height 32px
+
+				p
+					text-indent 2em
+					font-size 12px
+					line-height 22px
+
+		.sub-news-list-block
+			width 336px
+			border-top 1px solid #9fa0a0
+			.item
+				padding 5px 0
+				width 100%
+				border-bottom 1px solid #9fa0a0
+				color #313131
+				font-size 14px
+				line-height 24px
+				transition 0.3s
+				&:hover
+					h3
+						color #008dcb
+					.pic
+						img 
+							transform scale(1.1)
+				.pic
+					overflow hidden
+					img
+						transition 1s
+
+				.content
+					width 210px
+
+				h3
+					padding 5px
+					font-weight bold
+					transition 0.3s
+
+				img
+					display block
+					width 114px
+
+		.news-list-block
+			margin-left -2%
+
+			.item
+				margin-left 2%
+				width 31.33%
+				&:hover
+					.pic
+						img
+							transform scale(1.1)
+					.content
+						h3
+							color #008dcb
+
+				.pic, .content
+					display block
+
+				.pic
+					overflow hidden
+					img
+						display block
+						width 100%
+						transition 1s
+
+				.content
+					min-height 230px
+
+					h3
+						padding-top 5px
+						min-height 52px
+						color #454545
+						font-weight bold
+						font-size 16px
+						line-height 26px
+						transition 0.3s
+
+					p, .date
+						color #595757
+						text-indent 2em
+						font-size 14px
+						line-height 22px
+
+					.date
+						display block
+						text-align right
+						text-indent 0
+
+		.page-control-block
+			padding 0 30px
+			background #e5e5e5
+			color #313131
+			font-size 12px
+			line-height 30px
+
+			a, span
+				margin 0 5px
+				padding 0 3px
+			a
+				transition 0.3s
+				&:hover
+					color #008dcb
+
+			input
+				box-sizing border-box
+				margin-top 5px
+				padding 0 10px
+				width 100px
+				height 20px
+				outline none
+				border 1px solid #acacac
+				background none
+
+.footer
+	border-top 3px solid #008dcb
+	background #282828
+
+	.brand-list-block
+		padding 10px 0 10px
+
+		.item
+			margin 0 20px
+			img
+				display block
+				width 130px
+
+	.copy-right
+		padding-bottom 20px
+		color #a0a0a0
+		text-align center
+		font-size 12px
+		line-height 22px
+
+		.bdb
+			margin-bottom 5px
+			padding-bottom 5px
+			border-bottom 1px solid #fff
+			img
+				display block
+				margin 0 auto
